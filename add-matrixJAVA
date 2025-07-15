@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class MatrixAddition {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Matrix dimensions
+        System.out.print("Enter number of rows: ");
+        int rows = scanner.nextInt();
+
+        System.out.print("Enter number of columns: ");
+        int cols = scanner.nextInt();
+
+        int[][] matrixA = new int[rows][cols];
+        int[][] matrixB = new int[rows][cols];
+        int[][] sum = new int[rows][cols];
+
+        // Input Matrix A
+        System.out.println("\nEnter elements of Matrix A:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                System.out.print("A[" + i + "][" + j + "] = ");
+                matrixA[i][j] = scanner.nextInt();
+            }
+        }
+
+        // Input Matrix B
+        System.out.println("\nEnter elements of Matrix B:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                System.out.print("B[" + i + "][" + j + "] = ");
+                matrixB[i][j] = scanner.nextInt();
+            }
+        }
+
+        // Calculate Sum
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                sum[i][j] = matrixA[i][j] + matrixB[i][j];
+            }
+        }
+
+        // Display Result
+        System.out.println("\nSum of Matrix A and B:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                System.out.print(sum[i][j] + "\t");
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}

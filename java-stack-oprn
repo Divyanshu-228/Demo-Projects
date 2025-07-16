@@ -5,7 +5,7 @@ public class FullStackOperations {
         Stack<Integer> stack = new Stack<>();
 
         // Push operation
-        System.out.println("🟢 Pushing elements onto stack:");
+        System.out.println("Pushing elements onto stack:");
         stack.push(10);
         stack.push(20);
         stack.push(30);
@@ -13,25 +13,25 @@ public class FullStackOperations {
         System.out.println("Stack: " + stack);
 
         // Peek operation
-        System.out.println("\n🔵 Peek top element:");
+        System.out.println("\n Peek top element:");
         System.out.println("Top element: " + stack.peek());
 
         // Pop operation
-        System.out.println("\n🔴 Popping top element:");
+        System.out.println("\n Popping top element:");
         int popped = stack.pop();
         System.out.println("Popped element: " + popped);
         System.out.println("Stack after pop: " + stack);
 
         // isEmpty check
-        System.out.println("\n🟡 Is the stack empty?");
+        System.out.println("\n Is the stack empty?");
         System.out.println(stack.isEmpty() ? "Yes" : "No");
 
         // Size of the stack
-        System.out.println("\n🟣 Size of the stack:");
+        System.out.println("\n Size of the stack:");
         System.out.println("Size: " + stack.size());
 
         // Search operation
-        System.out.println("\n🟠 Searching for element 20:");
+        System.out.println("\n Searching for element 20:");
         int pos = stack.search(20);
         if (pos != -1) {
             System.out.println("Element found at position (from top): " + pos);
@@ -40,31 +40,31 @@ public class FullStackOperations {
         }
 
         // Iterating stack from bottom to top
-        System.out.println("\n🔁 Iterating stack (bottom to top):");
+        System.out.println("\n Iterating stack (bottom to top):");
         for (int item : stack) {
             System.out.print(item + " ");
         }
         System.out.println();
 
         // Iterating stack from top to bottom
-        System.out.println("\n🔁 Iterating stack (top to bottom):");
+        System.out.println("\n Iterating stack (top to bottom):");
         for (int i = stack.size() - 1; i >= 0; i--) {
             System.out.print(stack.get(i) + " ");
         }
         System.out.println();
 
         // Cloning stack
-        System.out.println("\n📄 Cloning stack:");
+        System.out.println("\n Cloning stack:");
         Stack<Integer> clonedStack = (Stack<Integer>) stack.clone();
         System.out.println("Cloned Stack: " + clonedStack);
 
         // Convert to array
-        System.out.println("\n📦 Stack to array:");
+        System.out.println("\n Stack to array:");
         Object[] array = stack.toArray();
         System.out.println("Array: " + Arrays.toString(array));
 
         // Clear stack
-        System.out.println("\n🚮 Clearing stack:");
+        System.out.println("\n Clearing stack:");
         stack.clear();
         System.out.println("Stack after clearing: " + stack);
     }

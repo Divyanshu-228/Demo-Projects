@@ -1,0 +1,56 @@
+#include <iostream>
+#include <stack>
+using namespace std;
+
+int main() {
+    stack<int> st;
+
+    st.push(10);
+    st.push(20);
+    st.push(30);
+    st.push(40);
+
+    stack<int> temp = st;
+    cout << "Stack (top to bottom): ";
+    while (!temp.empty()) {
+        cout << temp.top() << " ";
+        temp.pop();
+    }
+    cout << "\n";
+
+    cout << "\nTop element: " << st.top() << "\n";
+
+    st.pop();
+    cout << "\nTop after pop: " << st.top() << "\n";
+
+    cout << "\nIs the stack empty?\n";
+    cout << (st.empty() ? "Yes" : "No") << "\n";
+
+    cout << "\nStack size: " << st.size() << "\n";
+
+    temp = st;
+    bool found = false;
+    while (!temp.empty()) {
+        if (temp.top() == 20) {
+            found = true;
+            break;
+        }
+        temp.pop();
+    }
+    cout << "\nSearching for element 20:\n";
+    cout << (found ? "Found!" : "Not found!") << "\n";
+
+    stack<int> reversed;
+    while (!st.empty()) {
+        reversed.push(st.top());
+        st.pop();
+    }
+    cout << "\nReversed Stack (top to bottom): ";
+    while (!reversed.empty()) {
+        cout << reversed.top() << " ";
+        reversed.pop();
+    }
+    cout << "\n";
+
+    return 0;
+}

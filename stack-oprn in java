@@ -1,0 +1,28 @@
+import java.util.Stack;
+
+public class StackExample {
+    public static void main(String[] args) {
+        Stack<Integer> stack = new Stack<>();
+
+        // Push elements onto the stack
+        System.out.println("Pushing elements:");
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+        System.out.println("Stack: " + stack);
+
+        // Peek at the top element
+        System.out.println("\nTop element (peek): " + stack.peek());
+
+        // Pop elements from the stack
+        System.out.println("\nPopping elements:");
+        while (!stack.isEmpty()) {
+            int popped = stack.pop();
+            System.out.println("Popped: " + popped);
+            System.out.println("Current Stack: " + stack);
+        }
+
+        // Check if stack is empty
+        System.out.println("\nIs stack empty? " + stack.isEmpty());
+    }
+}

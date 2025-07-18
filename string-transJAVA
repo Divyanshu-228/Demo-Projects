@@ -1,0 +1,38 @@
+public class StringOperations {
+
+    public static void main(String[] args) {
+        String s = "hello 😊🚀";
+
+        // 1. Indexing
+        System.out.println("Character at index 1: " + s.charAt(1)); // 'e'
+
+        // 2. Slicing
+        System.out.println("Substring from index 1 to 4: " + s.substring(1, 4)); // "ell"
+        System.out.println("Substring from index 6 to end: " + s.substring(6)); // Includes emoji
+
+        // 3. Traversal with index
+        System.out.println("\nTraversing with index:");
+        for (int i = 0; i < s.length(); i++) {
+            System.out.println("Index " + i + ": " + s.charAt(i));
+        }
+
+        // 4. Traversal using for-each
+        System.out.println("\nTraversing with toCharArray():");
+        for (char c : s.toCharArray()) {
+            System.out.println(c);
+        }
+
+        // 5. Reverse traversal
+        System.out.println("\nReverse traversal:");
+        for (int i = s.length() - 1; i >= 0; i--) {
+            System.out.print(s.charAt(i));
+        }
+        System.out.println();
+
+        // 6. Unicode-safe traversal (for emojis and special characters)
+        System.out.println("\nUnicode-safe traversal (code points):");
+        s.codePoints().forEach(cp -> {
+            System.out.println("Char: " + new String(Character.toChars(cp)) + " | CodePoint: " + cp);
+        });
+    }
+}
